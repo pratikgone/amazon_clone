@@ -15,6 +15,7 @@ Frontend: HTML, CSS
 # Screen Recording
 https://github.com/user-attachments/assets/ce35c452-9dd4-4b3d-83f3-47fbf4d0e821
 # Installation
+git clone https://github.com/pratikgone/amazon_clone.git
 
 
 
