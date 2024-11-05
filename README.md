@@ -1,5 +1,5 @@
 # amazon_clone
-An Amazon clone built to simulate core e-commerce functionalities, including product browsing, user authentication, shopping cart management, and order placement.
+The goal of this project is to create a   static replica of Amazon's homepage using HTML and CSS.This clone will focus on replicating the layout and design of key elements of Amazon’s website, such as the navigation bar, product display grid, and footer, without implementing dynamic functionality.
 # Features
 <b>1.User Authentication</b>: Secure sin-up and login system.
 </br>
