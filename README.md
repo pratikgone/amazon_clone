@@ -14,6 +14,8 @@ An Amazon clone built to simulate core e-commerce functionalities, including pro
 Frontend: HTML, CSS
 # Screen Recording
 https://github.com/user-attachments/assets/ce35c452-9dd4-4b3d-83f3-47fbf4d0e821
+# Installation
+
 
 
 
