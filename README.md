@@ -13,7 +13,7 @@ An Amazon clone built to simulate core e-commerce functionalities, including pro
 # Technologies Used
 Frontend: HTML, CSS
 # Screen Recording
-<video width="100" height="100" src="C:\Users\Pratik\Downloads\screenrecording.mp4.mp4" controls></video>
-"C:\Users\Pratik\Downloads\screenrecording.mp4.mp4"
+https://github.com/user-attachments/assets/ce35c452-9dd4-4b3d-83f3-47fbf4d0e821
+
 
 
