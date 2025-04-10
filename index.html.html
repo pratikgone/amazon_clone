@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Amazon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: nowrap; /* Don't wrap items */
+    overflow-x: auto; /* Allow scrolling */
+    height: auto;
+  }
+
+  .navaddress,
+  .navsignin,
+  .navreturn,
+  .navcart {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    font-size: 12px;
+    padding: 4px;
+    white-space: nowrap;
+  }
+
+  .navsearch {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .panel {
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: 13px;
+  }
+
+  .panelops {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 5px;
+  }
+
+  .panelops p {
+    display: inline-block;
+    margin-right: 15px;
+  }
+}
+
+
+* {
+      box-sizing: border-box;
+    }
+
+   
+
+    .carousel-container {
+      position: relative;
+      max-width: 100%;
+      height: 500px;
+      overflow: hidden;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .carousel-slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .carousel-slide.active {
+      opacity: 1;
+    }
+
+        * {
+            margin: 0px;
+            font-family: arial;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            height: 60px;
+            background-color: #0f1111;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .navlogo {
+            height: 50px;
+            width: 100px;
+        }
+
+
+        .logo {
+            background-image: url(Amazon-Logo-Black.jpg.jpg);
+            height: 50px;
+            width: 100px;
+            background-size: cover;
+       
+            border: 1.5px solid transparent;
+            border: 1.5px solid rgb(30, 27, 27);
+            cursor: pointer;
+        }
+            
+        
+
+        .border {
+            border: 1.5px solid transparent;
+        }
+
+        .border:hover {
+            border: 1.5px solid white;
+            cursor: pointer;
+        }
+
+        .addone {
+            color: #cccccc;
+            font-size: 0.85rem;
+            margin-left: 15px;
+        }
+
+        .addsecond {
+            font-size: 1rem;
+            margin-left: 3px;
+        }
+
+        .addicon {
+            display: flex;
+            align-items: center;
+        }
+
+        .navsearch {
+            display: flex;
+            justify-content: space-evenly;
+            height: 40px;
+            width: 620px;
+            border-radius: 4px;
+            background-color: pink;
+        }
+
+        .navsearch:hover {
+            border: 2px solid orange;
+        }
+
+        .navsearch select {
+            background-color: #f3f3f3;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            border: none;
+            width: 50px;
+            text-align: center;
+        }
+
+        .searchinput {
+            width: 100%;
+            font-size: 1rem;
+            border: none;
+        }
+
+        .searchicon {
+            width: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            color: #0f1111;
+            background-color: rgb(235, 157, 31);
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+
+        span {
+            font-size: 0.7rem;
+        }
+
+        .navsecond {
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .navcart i {
+            font-size: 30px;
+        }
+
+        .navcart {
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .panel {
+            height: 40px;
+            background-color: #222f3d;
+            display: flex;
+            color: #ffffff;
+            align-items: center;
+        }
+
+        .panelall {
+            font-weight: 700;
+            margin: 0 15px;
+        }
+
+        .panelops p {
+            display: inline;
+            margin-left: 15px;
+        }
+
+        .panelops {
+            width: 70%;
+            font-size: 0.85rem;
+        }
+
+        .herosection {
+            background-image: url(heroimage.jpg);
+            height: 400px;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .heromsg {
+            background-color: white;
+            color: #0f1111;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.85rem;
+            width: 80%;
+            margin-bottom: 25px;
+        }
+
+        .heromsg a {
+            color: #007185;
+            text-decoration: none;
+        }
+
+        .shopsection {
+    background-color: #e45050;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+/* Box container */
+.box {
+    background-color: white;
+    width: 23%;
+    padding: 20px 0px 15px;
+    margin: 10px;
+    box-sizing: border-box;
+    min-height: 450px;  /* ✅ Add min-height for consistency */
+    flex: 1 1 300px;     /* Responsive */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Box content */
+.boxcontent {
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.boxcontent p {
+    color: #007185;
+    cursor: pointer;
+}
+
+/* Image wrapper */
+.box1img, .box2img, .box3img, .box4img,
+.box5img, .box6img, .box7img, .box8img {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Image styling */
+.box1img img, .box2img img, .box3img img, .box4img img,
+.box5img img, .box6img img, .box7img img, .box8img img {
+    width: 100%;
+    height: 200px;          /* ✅ Fixed image height for balance */
+    object-fit: cover;      /* ✅ Maintain aspect ratio and crop overflow */
+    border-radius: 5px;
+}
+
+/* Info section */
+.info {
+    display: none;
+    background-color: #f6f6f6;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+/* Price and offer */
+.price-offer p {
+    margin-bottom: 10px;
+    color: rgb(177, 72, 60);
+}
+
+.price {
+    font-weight: bold;
+    font-size: 16px;
+    color: red;
+    margin: 0;
+}
+
+.offer {
+    font-size: 14px;
+    color: red;
+    margin: 0;
+}
+
+/* Responsive for small screens */
+@media screen and (max-width: 600px) {
+    .box {
+        width: 100%;
+    }
+}
+
+        footer {
+            margin-top: 15px;
+        }
+
+        .footpanel1 {
+            background-color: #37475a;
+            color: white;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.85rem;
+        }
+
+        .footpanel2 {
+            background-color: #222f3d;
+            color: white;
+            height: 300px;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        ul {
+            margin-top: 20px;
+        }
+
+        ul a {
+            display: block;
+            font-size: 0.85rem;
+            margin-top: 10px;
+            color: #dddddd;
+        }
+
+        .footpanel3 {
+            background-color: #222f3d;
+            border-top: 0.5px solid white;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footpanel4 {
+            background-color: #0f1111;
+            color: white;
+            height: 80px;
+            font-size: 0.7rem;
+            text-align: center;
+        }
+
+        .pages {
+            padding-top: 25px;
+        }
+
+        .copyright {
+            padding-top: 5px;
+        }
+
+        /* Modal Styles */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+         
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal {
+            background-color: white;
+            color: black;
+            width: 400px;
+            padding: 20px;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .modal h2 {
+            margin-bottom: 20px;
+        }
+
+        .modal input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .modal button {
+            background-color: #f0c14b;
+            border: 1px solid #a88734;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .modal button:hover {
+            background-color: #ddb347;
+        }
+    
+        /* Sign-In Modal Styles */
+#signinModal .modal {
+    width: 400px;
+    padding: 25px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#signinModal h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: black;
+}
+
+#signinModal p {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: black;
+}
+
+#signinModal input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+#signinModal button {
+    background-color: #f0c14b;
+    border: 1px solid #a88734;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+}
+
+#signinModal button:hover {
+    background-color: #ddb347;
+}
+
+#signinModal .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Returns & Orders Modal Styles */
+#returnsModal .modal {
+    width: 400px;
+    padding: 25px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+#returnsModal h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+#returnsModal p {
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+#returnsModal button {
+    background-color: #f0c14b;
+    border: 1px solid #a88734;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+}
+#returnsModal button:hover {
+    background-color: #ddb347;
+}
+#returnsModal .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+
+/* Cart Modal */
+#cartModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#cartModal .modal {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 350px;
+    position: relative;
+    text-align: center;
+}
+
+#cartModal .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#cartModal button {
+    background-color: #f0c14b;
+    border: 1px solid #a88734;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Sidebar Modal */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    display: none;
+    z-index: 1000;
+}
+
+.sidebar {
+    background-color: #fff;
+    color: black;
+    width: 300px;
+    height: 100%;
+    padding: 20px;
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: slideIn 0.3s forwards;
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.sidebar-header h3 {
+    font-size: 18px;
+    margin: 0;
+    
+    background-color: #283030;
+    color: white;
+}
+
+
+.sidebar-header .close-btn {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.sidebar-links {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.sidebar-links li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.sidebar-links li:hover {
+    background-color: #f3f3f3;
+}
+
+.panelops p{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
+.footpanel1 {
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="navlogo border">
+               
+                <a href="/amazon_clone/index.html">
+                    <div class="logo">
+                        
+                    </div>
+                </a>
+            </div>
+        
+            
+            <div class="navaddress border" onclick="openModal()">
+                <p class="addone"> Deliver to</p>
+                <div class="addicon">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="addsecond">India</p>
+                </div>
+            </div>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="locationModal">
+        <div class="modal">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Choose your location</h2>
+            <p>Enter your PIN code to check availability and delivery options</p>
+            <input type="text" placeholder="Enter PIN Code" maxlength="6">
+            <button onclick="closeModal()">Apply</button>
+        </div>
+    </div>
+
+
+            <div class="navsearch">
+                <select><option>All</option>
+                    <option>Arts & Crafts</option>
+                    <option>Beauty & Personal Care</option>
+                    <option>Home & Kitchen</option>
+                    <option>Boy's Fashion</option>
+                    <option>Electronics</option>
+                    <option>Kindle Store</option></select>
+                
+                <input placeholder="Search Amazon" class="searchinput">
+                <div class="searchicon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="navsignin border">
+                <p><span>Hello, sign in</span></p>
+                <p>Account & Lists</p>
+            </div>
+            <!-- Sign-In Modal -->
+<div class="modal-overlay" id="signinModal">
+    <div class="modal">
+        <span class="close-btn" onclick="closeSigninModal()">&times;</span>
+        <h2>Sign-In</h2>
+        <p>Welcome back! Please enter your email to continue.</p>
+        <input type="text" placeholder="Enter your email">
+        <button onclick="closeSigninModal()">Continue</button>
+    </div>
+</div>
+
+<div class="navreturn border" onclick="openReturnsModal()">
+    <p><span>Returns</span></p>
+    <p>& Orders</p>
+</div>
+
+<!-- Returns & Orders Modal -->
+<div class="modal-overlay" id="returnsModal">
+    <div class="modal">
+        <span class="close-btn" onclick="closeReturnsModal()">&times;</span>
+        <h2>Your Orders</h2>
+        <p>Please sign in to see your orders, return items, or manage returns.</p>
+        <button onclick="closeReturnsModal()">Sign In</button>
+    </div>
+</div>
+
+<div class="navcart border" onclick="openCartModal()">
+    <i class="fa-solid fa-cart-shopping"></i> Cart
+</div>
+
+
+<!-- Cart Modal -->
+<div id="cartModal" class="modal-overlay">
+    <div class="modal">
+      <span class="close-btn" onclick="closeCartModal()">&times;</span>
+      <h2>Your Cart</h2>
+      <p>Your cart is currently empty.</p>
+      <button onclick="closeCartModal()">Continue Shopping</button>
+    </div>
+  </div>
+</header>
+        <div class="panel">
+            <div class="panelall" onclick="openSidebar()">
+                <i class="fa-solid fa-bars"></i> All
+              </div>
+
+              <!-- Sidebar Menu -->
+<div id="sidebarMenu" class="sidebar-overlay">
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <span class="close-btn" onclick="closeSidebar()">&times;</span>
+        <h3><i class="fa-solid fa-user-circle" ></i> Hello, sign in</h3>
+      </div>
+      <ul class="sidebar-links">
+        <li>Trending</li>
+        <li>Best Sellers</li>
+        <li>New Releases</li>
+        <li>Movers and Shakers</li>
+        <hr>
+        <li>Digital Content & Devices</li>
+        <li>Amazon miniTV</li>
+        <li>Echo & Alexa</li>
+        <li>Fire TV</li>
+        <li>Kindle eBooks</li>
+      </ul>
+    </div>
+  </div>
+
+  
+            <div class="panelops">
+              <a href="/amazon_clone/todaydeals.html">  <p>Today's Deals</p></a>
+
+             <a href="/amazon_clone/registry.html">  <p>Registry</p></a> 
+
+                <a href="/amazon_clone/customerservice.html"> <p>Customer Service</p></a>
+              
+               <a href="/amazon_clone/giftcards.html"><p>Gift Cards</p></a> 
+               <a href="/amazon_clone/sell.html"><p>Sell</p></a> 
+            </div>
+        </div>
+    </div>
+
+
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+              <img src="heroimg 1.jpg" alt="Image 1" />
+            </div>
+            <div class="carousel-slide">
+              <img src="heroimg 2.jpg" alt="Image 2" />
+            </div>
+            <div class="carousel-slide">
+              <img src="heroimg 3.jpg" alt="Image 3" />
+            </div>
+          </div>
+
+    <div class="shopsection">
+        <div class="box box1">
+            <div class="boxcontent">
+                <h2>Clothes</h2>
+                <div class="box1img">
+                    <img src="box1_image.jpg" class="img-fluid" alt="Box 4 Image" style="width: 100%; height: auto;">
+                </div>
+                <div class="price-offer">
+                    <p class="price">₹999</p>
+                    <p class="offer">Up to 40% off</p>
+                  </div>
+                <p onclick="toggleInfo(this)">See more</p>
+                <div class="info">Trending clothing items like T-shirts, hoodies, jeans & more!</div>
+                
+            </div>
+        </div>
+    
+        <div class="box box2">
+            <div class="boxcontent">
+                <h2>Health & Personal Care</h2>
+                <div class="box2img">
+                    <img src="box2_image.jpg" class="img-fluid" alt="Box 4 Image" style="width: 100%; height: auto;">
+                </div>
+                <div class="price-offer">
+                    <p class="price">₹10,000</p>
+                    <p class="offer">Up to 55% off</p>
+                  </div>
+                <p onclick="toggleInfo(this)">See more</p>
+                <div class="info">Shop vitamins, grooming kits, skincare, wellness & more.</div>
+            </div>
+        </div>
+    
+        <div class="box box3">
+            <div class="boxcontent">
+                <h2>Furniture</h2>
+                <div class="box3img">
+                    <img src="box3_image.jpg" class="img-fluid" alt="Box 4 Image" style="width: 100%; height: auto;">
+                </div>
+                <div class="price-offer">
+                    <p class="price">₹50,000</p>
+                    <p class="offer">Up to 60% off</p>
+                  </div>
+                <p onclick="toggleInfo(this)">See more</p>
+                <div class="info">Modern & classic furniture for home and office.</div>
+            </div>
+        </div>
+    
+        <div class="box box4">
+            <div class="boxcontent">
+                <h2>Devices</h2>
+                <div class="box4img">
+                    <img src="box4_image.jpg" class="img-fluid" alt="Box 4 Image" style="width: 100%; height: auto;">
+                </div>
+                <div class="price-offer">
+                    <p class="price">₹70,000</p>
+                    <p class="offer">Up to 34% off</p>
+                  </div>
+                <p onclick="toggleInfo(this)">See more</p>
+                <div class="info">Latest smartphones, tablets, and smart gadgets.</div>
+            </div>
+        </div>
+    
+        <div class="box box5">
+            <div class="boxcontent">
+                <h2>Beauty Picks</h2>
+                <div class="box5img">
+                    <img src="box5_image.jpg" class="img-fluid" alt="Box 4 Image" style="width: 100%; height: auto;">
+                </div>
+                <div class="price-offer">
+                    <p class="price">₹4,000</p>
+                    <p class="offer">Up to 300% off</p>
+                  </div>
+                <p onclick="toggleInfo(this)">See more</p>
+                <div class="info">Top beauty brands in makeup, skincare & haircare.</div>
+            </div>
+        </div>
+    
+        <div class="box box6">
+            <div class="boxcontent">
+                <h2>Pets Care</h2>
+                <div class="box6img">
+                    <img src="box6_image.jpg" class="img-fluid" alt="Box 4 Image" style="width: 100%; height: auto;">
+                </div>
+                <div class="price-offer">
+                    <p class="price">₹2,000</p>
+                    <p class="offer">Up to 50% off</p>
+                  </div>
+                <p onclick="toggleInfo(this)">See more</p>
+                <div class="info">All pet supplies including food, toys & grooming tools.</div>
+            </div>
+        </div>
+    
+        <div class="box box7">
+            <div class="boxcontent">
+                <h2>New Arrival in Toys</h2>
+                <div class="box7img">
+                    <img src="box7_image.jpg" class="img-fluid" alt="Box 4 Image" style="width: 100%; height: auto;">
+                </div>
+                <div class="price-offer">
+                    <p class="price">₹600</p>
+                    <p class="offer">Up to 70% off</p>
+                  </div>
+                <p onclick="toggleInfo(this)">See more</p>
+                <div class="info">New educational & fun toys just for kids!</div>
+            </div>
+        </div>
+    
+        <div class="box box8">
+            <div class="boxcontent">
+                <h2>Discover Fashion Trends</h2>
+                <div class="box8img">
+                    <img src="box8_image.jpg" class="img-fluid" alt="Box 4 Image" style="width: 100%; height: auto;">
+                </div>
+                <div class="price-offer">
+                    <p class="price">₹8,000</p>
+                    <p class="offer">Up to 35% off</p>
+                  </div>
+                <p onclick="toggleInfo(this)">See more</p>
+                <div class="info">Latest fashion for men, women, and kids.</div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <body id="top">
+            <div class="footpanel1" onclick="scrollToTop()">Back to top</div>
+
+        <div class="footpanel2">
+            <ul>
+                <p>Get to Know Us</p><a>Careers</a><a>Blog</a><a>About Amazon</a><a>Investor Relations</a><a>Amazon Devices</a><a>Amazon Science</a>
+            </ul>
+            <ul>
+                <p>Make Money with Us</p><a>Sell products on Amazon</a><a>Sell on Amazon Business</a><a>Sell apps on Amazon</a><a>Become an Affiliate</a><a>Advertise Your Products</a><a>Self-Publish with Us</a><a>Host an Amazon Hub</a><a>See More Make Money with Us</a>
+            </ul>
+            <ul>
+                <p>Amazon Payment Products</p><a>Amazon Business Card</a><a>Shop with Points</a><a>Reload Your Balance</a><a>Amazon Currency Converter</a>
+            </ul>
+            <ul>
+                <p>Let Us Help You</p><a>Amazon and COVID-19</a><a>Your Account</a><a>Your Orders</a><a>Shipping Rates & Policies</a><a>Returns & Replacements</a><a>Manage Your Content and Devices</a><a>Help</a>
+            </ul>
+        </div>
+        <div class="footpanel3">
+            <a href="/amazon_clone/home.html">
+              <div class="logo"></div>
+            </a>
+          </div>
+          
+        <div class="footpanel4">
+            <div class="pages">
+                <a>Conditions of Use</a>
+                <a>Privacy Notice</a>
+                <a>Consumer Health Data Privacy Disclosure</a>
+                <a>Your Ads Privacy Choices</a>
+            </div>
+            <div class="copyright">© 1996-2024, Amazon.com, Inc. or its affiliates</div>
+            <h4>created by PratikGone</h4>
+        </div>
+    </footer>
+
+    <script>
+        function openModal() {
+            document.getElementById('locationModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('locationModal').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('locationModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        }
+   
+        /*hello signin*/
+        // Location Modal
+        function openModal() {
+            document.getElementById('locationModal').style.display = 'flex';
+        }
+    
+        function closeModal() {
+            document.getElementById('locationModal').style.display = 'none';
+        }
+    
+        // Sign-In Modal
+        function openSigninModal() {
+            document.getElementById('signinModal').style.display = 'flex';
+        }
+    
+        function closeSigninModal() {
+            document.getElementById('signinModal').style.display = 'none';
+        }
+    
+        // Close modals on outside click
+        window.onclick = function(event) {
+            const locationModal = document.getElementById('locationModal');
+            const signinModal = document.getElementById('signinModal');
+            if (event.target === locationModal) {
+                closeModal();
+            }
+            if (event.target === signinModal) {
+                closeSigninModal();
+            }
+        }
+    
+        // Event listener for Hello Sign-In
+        document.querySelector('.navsignin').addEventListener('click', openSigninModal);
+        /*return &order*/
+        // Returns & Orders Modal
+function openReturnsModal() {
+    document.getElementById('returnsModal').style.display = 'flex';
+}
+function closeReturnsModal() {
+    document.getElementById('returnsModal').style.display = 'none';
+}
+window.onclick = function(event) {
+    const locationModal = document.getElementById('locationModal');
+    const signinModal = document.getElementById('signinModal');
+    const returnsModal = document.getElementById('returnsModal');
+
+    if (event.target === locationModal) closeModal();
+    if (event.target === signinModal) closeSigninModal();
+    if (event.target === returnsModal) closeReturnsModal();
+}
+
+/*cart*/
+function openCartModal() {
+    document.getElementById("cartModal").style.display = "flex";
+}
+
+function closeCartModal() {
+    document.getElementById("cartModal").style.display = "none";
+}
+
+/*panel all*/ 
+function openSidebar() {
+    document.getElementById("sidebarMenu").style.display = "block";
+}
+
+function closeSidebar() {
+    document.getElementById("sidebarMenu").style.display = "none";
+}
+
+/*back to top*/
+
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
+
+  /*boxes*/
+
+  function toggleInfo(el) {
+    const infoBox = el.nextElementSibling;
+    infoBox.style.display = (infoBox.style.display === "block") ? "none" : "block";
+  }
+
+
+    </script>
+    <script>
+        const slides = document.querySelectorAll('.carousel-slide');
+        let index = 0;
+    
+        setInterval(() => {
+          slides[index].classList.remove('active');
+    
+          index = (index + 1) % slides.length;
+    
+          slides[index].classList.add('active');
+        }, 3000); // Change slide every 3 seconds
+      </script>
+    
+    
+
+</body>
+</html>
+
+
