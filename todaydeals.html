@@ -1,1 +1,137 @@
 
+          <!-- Deals Section -->
+          <div class="deals">
+      
+            <div class="deal-card">
+              <img src="./image/product1.webp" class="img-fluid" alt="Product 1" />
+              <div class="title">Bluetooth Speaker</div>
+              <div class="price">₹2,465</div>
+              <div class="discount">25% off</div>
+              <p>JBL Go 3 Eco - Portable Mini Bluetooth Speaker, big audio and punchy bass, IP67 waterproof and dustproof, 5 hours of playtime, Made in part with recycled materials (Eco Green)</p>
+            </div>
+      
+            <div class="deal-card">
+              <img src="./image/product2.webp" class="img-fluid" alt="Product 2" />
+              <div class="title">Wireless Headphone</div>
+              <div class="price">₹1299</div>
+              <div class="discount">30% off</div>
+              JBL Tune 510BT - Bluetooth headphones with up to 40 hours battery, microphone for call, foldable and comfortable, Android and iOs compatible (White)
+           
+            </div>
+      
+            <div class="deal-card">
+              <img src="./image/product3.jpg" class="img-fluid" alt="Product 3" />
+              <div class="title"> Portable Blender</div>
+              <div class="price">₹4,590</div>
+              <div class="discount">21% off</div>
+              Ninja Fit Compact Personal Blender, Portable Blender for-Smoothies, Shakes, Food Prep, and Frozen Blending, 700-Watt Base, (2) 16-oz. Cups and Spout Lids, Black QB3001SS
+            </div>
+      
+            <div class="deal-card">
+              <img src="./image/product4.jpg" class="img-fluid" alt="Product 4" />
+              <div class="title">Samsung Galaxy Tab A9+</div>
+              <div class="price">₹13,345</div>
+              <div class="discount">29% off</div>
+              Samsung Galaxy Tab A9+ Tablet 11” 64GB Android Tablet, Big Screen, Quad Speakers, Upgraded Chipset, Multi Window Display, Slim, Light, Durable Design, US Version, 2024, Graphite
+            </div>
+      
+          </div>
+        </div>
+
+        <footer>
+            <div id="top">
+                <button class="footpanel1" onclick="scrollToTop()">BACK TO TOP</button>
+              </div>
+              
+          <div class="footpanel2">
+              <ul>
+                  <p>Get to Know Us</p><a>Careers</a><a>Blog</a><a>About Amazon</a><a>Investor Relations</a><a>Amazon Devices</a><a>Amazon Science</a>
+              </ul>
+              <ul>
+                  <p>Make Money with Us</p><a>Sell products on Amazon</a><a>Sell on Amazon Business</a><a>Sell apps on Amazon</a><a>Become an Affiliate</a><a>Advertise Your Products</a><a>Self-Publish with Us</a><a>Host an Amazon Hub</a><a>See More Make Money with Us</a>
+              </ul>
+              <ul>
+                  <p>Amazon Payment Products</p><a>Amazon Business Card</a><a>Shop with Points</a><a>Reload Your Balance</a><a>Amazon Currency Converter</a>
+              </ul>
+              <ul>
+                  <p>Let Us Help You</p><a>Amazon and COVID-19</a><a>Your Account</a><a>Your Orders</a><a>Shipping Rates & Policies</a><a>Returns & Replacements</a><a>Manage Your Content and Devices</a><a>Help</a>
+              </ul>
+          </div>
+          <div class="footpanel3">
+           
+              <div class="logo"></div>
+            
+          </div>
+          <div class="footpanel4">
+              <div class="pages">
+                  <a>Conditions of Use</a>
+                  <a>Privacy Notice</a>
+                  <a>Consumer Health Data Privacy Disclosure</a>
+                  <a>Your Ads Privacy Choices</a>
+              </div>
+              <div class="copyright">© 1996-2024, Amazon.com, Inc. or its affiliates</div>
+              <h4>created by PratikGone</h4>
+          </div>
+      </footer>
+  
+
+
+      <script>
+        function openModal() {
+            document.getElementById('locationModal').style.display = 'flex';
+        }
+        function closeModal() {
+            document.getElementById('locationModal').style.display = 'none';
+        }
+        
+        function openSigninModal() {
+            document.getElementById('signinModal').style.display = 'flex';
+        }
+        function closeSigninModal() {
+            document.getElementById('signinModal').style.display = 'none';
+        }
+        
+        function openReturnsModal() {
+            document.getElementById('returnsModal').style.display = 'flex';
+        }
+        function closeReturnsModal() {
+            document.getElementById('returnsModal').style.display = 'none';
+        }
+        
+        function openCartModal() {
+            document.getElementById('cartModal').style.display = 'flex';
+        }
+        function closeCartModal() {
+            document.getElementById('cartModal').style.display = 'none';
+        }
+        
+        function openSidebar() {
+            document.getElementById('sidebarMenu').style.display = 'block';
+        }
+        function closeSidebar() {
+            document.getElementById('sidebarMenu').style.display = 'none';
+        }
+        
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        function toggleInfo(el) {
+            const infoBox = el.nextElementSibling;
+            infoBox.style.display = (infoBox.style.display === "block") ? "none" : "block";
+        }
+        
+        document.querySelector('.navsignin').addEventListener('click', openSigninModal);
+        
+        window.onclick = function(event) {
+            const modals = ['locationModal', 'signinModal', 'returnsModal', 'cartModal'];
+            modals.forEach(id => {
+                const modal = document.getElementById(id);
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        }
+        </script>
+</body>
+</html>
